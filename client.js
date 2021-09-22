@@ -12,7 +12,12 @@ const connect = function () {
   conn.on("connect", () => {
     console.log('Successfully connected to game server')
     conn.write('Name: CAM');
+    // setTimeout(() => {
+    //   conn.write('Move: up');
+    // }, 2000)
+    
   });
+  
   conn.on("data", (data) => {
     console.log(data)
   });
